@@ -1,0 +1,18 @@
+# Specs and planning (not part of published skill)
+*.SPEC*.md
+SPEC*.md
+plan.md
+
+# Tessl local state
+.tessl/
+tessl.json
+
+# Editor / tooling
+.vscode/
+.agents/
+.claude/
+.github/
+.mcp.json
+
+# OS
+.DS_Store
