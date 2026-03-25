@@ -1,6 +1,6 @@
 {
   "name": "crab/nextsteps",
-  "version": "0.4.0",
+  "version": "0.3.1",
   "summary": "Intelligent next-steps engine that generates dynamic, context-aware follow-up actions, questions, and out-of-the-box suggestions after each user interaction. Leverages persistent memory and self-improving preference learning to psychically anticipate what the user needs next. Use when: (1) user completes a question or task, (2) user needs guidance on what to do next, (3) agent wants to proactively suggest follow-up actions based on conversation context and memory.",
   "private": false,
   "skills": {
