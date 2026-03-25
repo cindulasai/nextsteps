@@ -14,5 +14,8 @@ tessl.json
 .github/
 .mcp.json
 
+# NextSteps personal preferences
+.nextsteps/
+
 # OS
 .DS_Store

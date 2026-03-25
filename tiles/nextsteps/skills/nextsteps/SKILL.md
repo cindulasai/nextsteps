@@ -1,7 +1,7 @@
 ---
 name: nextsteps
 description: |
-  Append context-aware next-step suggestions after every agent response. Generates actionable follow-ups, surfaces unfinished tasks from memory, and includes at least one creative lateral suggestion. Self-learns user preferences for count, categories, and format. Use when: (1) any response is generated and nextsteps is active, (2) user says "next steps", "what should I do", "suggestions", "what now", (3) user wants to customize suggestion count, categories, or format, (4) user says "disable next steps" or "enable next steps".
+  Append context-aware next-step suggestions after every agent response. Generates actionable follow-ups, surfaces unfinished tasks from memory, and includes at least one creative lateral suggestion. Self-learns user preferences for count, categories, and format. Use when: (1) any response is generated and nextsteps is active, (2) user says /nextsteps, "next steps", "what should I do", "suggestions", "what now", (3) user wants to customize suggestion count, categories, or format, (4) user says "disable next steps" or "enable next steps".
 ---
 
 # NextSteps
