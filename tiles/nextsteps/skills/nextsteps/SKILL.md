@@ -27,9 +27,11 @@ Read `.nextsteps/PREFERENCES.md`. Extract: `enabled`, `display-count`, `preferre
 
 Determine: What did the user just accomplish or ask? What is the active topic? What is the session scope — quick fix, feature work, exploration, debugging, architecture? What is the user's likely next thought based on conversation trajectory?
 
-### Step 3 — Check Memory
+### Step 3 — Check Memory & Installed Skills
 
 Read `.nextsteps/BACKLOG.md` for unfinished items relevant to current context. Read PREFERENCES.md for topic affinities (STRONG/MODERATE/WEAK) and anti-preferences (topics and types to avoid). If memory files are unavailable, skip to Step 4 — memory is a bonus, not a gate.
+
+**Skill scan**: Check `.github/skills/` for installed workflow skills. For each, read its YAML `description` to extract trigger conditions. If the current context matches a skill's triggers, flag it as a routing candidate for Step 4. See [SKILL-ROUTING.md](references/SKILL-ROUTING.md) for the full discovery and matching protocol.
 
 ### Step 4 — Generate Candidates
 
@@ -45,6 +47,8 @@ Generate `display-count` suggestions using these six categories:
 | ✅ | Quick Win | MODERATE | Fills remaining slots |
 
 STRONG categories get guaranteed slots. Remaining slots filled by MODERATE categories in round-robin. Respect `excluded-categories`. Prioritize `preferred-categories`. See [CATEGORIES.md](references/CATEGORIES.md) for detailed taxonomy and examples.
+
+**Skill routing**: If Step 3 flagged a matching installed skill, replace one MODERATE-tier candidate with a skill-route suggestion: `⚡ **Activate [skill-name]** — [why now]`. At most 1 skill suggestion per response. See [SKILL-ROUTING.md](references/SKILL-ROUTING.md).
 
 ### Step 5 — Self-Review Gate (CRITICAL)
 
@@ -125,6 +129,18 @@ Detect the channel and adapt format:
 - **WhatsApp / Signal / iMessage**: Use shortest compact form
 
 All channels share the same `.nextsteps/` state. Preferences learned on one channel apply everywhere.
+
+## Skill Routing
+
+NextSteps doubles as a skill router. When other workflow skills are installed alongside nextsteps, it detects context matches and suggests activating the right skill at the right moment — so the user doesn't need to remember which skills they have.
+
+- **Discovery**: Scans `.github/skills/` at cold-start for installed skill YAML frontmatter
+- **Matching**: Compares conversation context against each skill's trigger keywords
+- **Suggestion**: Replaces one MODERATE slot with a skill-route suggestion when confidence is HIGH
+- **Tracking**: Skill selections logged as `[SELECTED] category: skill-route, skill: [name]`
+- **Learning**: Skills selected 3+ times become `skill-affinities` in PREFERENCES.md; skills ignored 5+ times are suppressed
+
+Full protocol: [SKILL-ROUTING.md](references/SKILL-ROUTING.md)
 
 ## Security Rules (CodeGuard)
 
