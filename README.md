@@ -14,6 +14,10 @@ NextSteps is an agent skill that appends smart, context-aware suggestions after 
 5. ✅ **Quick win: Pin your npm dependency versions** — 2 minutes, prevents surprise breaks
 ```
 
+<p align="center">
+  <img src="assets/demo.svg" alt="NextSteps in action" width="720"/>
+</p>
+
 ---
 
 ## Install
