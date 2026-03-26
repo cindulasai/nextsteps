@@ -23,10 +23,12 @@ NextSteps is an agent skill that appends smart, context-aware suggestions after 
 ## Install
 
 ```bash
-tessl install crab/nextsteps
+tessl install cindula/nextsteps
 ```
 
 That's it. Next time your agent responds, suggestions appear automatically.
+
+> **First time?** See the full [Installation Guide](INSTALL.md) for step-by-step setup including tessl CLI install and VS Code Copilot configuration.
 
 ## What It Does
 

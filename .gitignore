@@ -7,8 +7,9 @@ plan.md
 .tessl/
 tessl.json
 
-# Editor / tooling
-.vscode/
+# Editor / tooling (keep mcp.json for collaborators)
+.vscode/*
+!.vscode/mcp.json
 .agents/
 .claude/
 .github/
