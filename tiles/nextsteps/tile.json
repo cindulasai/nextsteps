@@ -1,7 +1,7 @@
 {
   "name": "cindula/nextsteps",
-  "version": "0.3.3",
-  "summary": "Intelligent next-steps engine that generates dynamic, context-aware follow-up actions, questions, and out-of-the-box suggestions after each user interaction. Leverages persistent memory and self-improving preference learning to psychically anticipate what the user needs next. Use when: (1) user completes a question or task, (2) user needs guidance on what to do next, (3) agent wants to proactively suggest follow-up actions based on conversation context and memory.",
+  "version": "0.4.0",
+  "summary": "Intelligent next-steps engine with personality-driven suggestions. Generates dynamic, context-aware follow-up actions with expert mentorship tone, pattern recognition, and trust-building mechanics. Features 4 personality profiles (Friendly Expert, Chill Buddy, Straight Shooter, Thoughtful Mentor), confidence markers, and session continuity. Leverages persistent memory, self-improving preference learning, and concise signal-dense suggestions to psychically anticipate what users need next. Use when: (1) user completes a question or task, (2) user needs guidance on what to do next, (3) agent wants to proactively suggest trusted follow-up actions.",
   "private": false,
   "skills": {
     "nextsteps": {
